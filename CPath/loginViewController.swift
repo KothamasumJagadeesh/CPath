@@ -19,6 +19,7 @@ class loginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
 
     @IBAction func registerTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -57,7 +58,7 @@ class loginViewController: UIViewController {
     }
     
     func login() {
-        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { [weak self] authResult, error in
+        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { [weak self] authResult, err in
           guard let strongSelf = self else { return }
           // ...
         }
